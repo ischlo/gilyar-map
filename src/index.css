@@ -1,0 +1,57 @@
+html,
+body,
+#root {
+  height: 100%;
+  margin: 0;
+  font-family: sans-serif;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  height: 100%;
+}
+
+.map {
+  height: 100%;
+  width: 100%;
+}
+
+.sidebar {
+  position: absolute;
+  top: 3vh;
+  right: 10px;
+  width: 25vw;
+  max-height: 80vh;
+  overflow-y: auto;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  /* keep above map */
+}
+
+
+.credits {
+  position: absolute;
+  bottom: 2vh;
+  right: 10px;
+  width: 30vw;
+  max-height: 15vh;
+  overflow: None;
+  background: rgba(255, 255, 255, 0.5);
+  padding: 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  z-index: 1000;
+  /* keep above map */
+}
+
+.box {
+  background: #fff;
+  border-radius: 8px;
+  padding: 1rem;
+  margin-bottom: 1rem;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
