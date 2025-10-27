@@ -2,8 +2,6 @@ import MapView from "./components/MapView";
 import Credits from "./components/Credits";
 import Sidebar from './components/Sidebar';
 import MapSelector from "./components/MapSelector";
-// import MapComponent from "./components/MapComponent";
-
 
 import "./index.css";
 
@@ -40,7 +38,7 @@ export default function App() {
       </div>
 
 
-      <MapView />
+      <MapView activeMap={activeMap} />
 
       <MapSelector
         mapTopics={map_topics}
