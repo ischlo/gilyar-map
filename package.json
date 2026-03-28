@@ -13,11 +13,16 @@
     "deploy": "gh-pages -d dist"
   },
   "dependencies": {
-    "leaflet": "^1.9.4",
+    "@deck.gl/core": "^9.2.11",
+    "@deck.gl/extensions": "^9.2.11",
+    "@deck.gl/geo-layers": "^9.2.11",
+    "@deck.gl/layers": "^9.2.11",
+    "@deck.gl/mesh-layers": "^9.2.11",
+    "@deck.gl/react": "^9.2.11",
+    "@deck.gl/widgets": "^9.2.11",
     "react": "^19.1.1",
     "react-dom": "^19.1.1",
-    "react-leaflet": "^5.0.0",
-    "react-scripts": "5.0.1"
+    "react-scripts": "^0.0.0"
   },
   "devDependencies": {
     "@eslint/js": "^9.36.0",
@@ -25,7 +30,8 @@
     "@types/react-dom": "^19.1.9",
     "@vitejs/plugin-react": "^5.0.3",
     "autoprefixer": "^10.4.21",
-    "eslint": "^9.36.0",
+    "baseline-browser-mapping": "^2.10.0",
+    "eslint": "^10.0.1",
     "eslint-plugin-react-hooks": "^5.2.0",
     "eslint-plugin-react-refresh": "^0.4.20",
     "gh-pages": "^6.3.0",
