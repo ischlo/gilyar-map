@@ -35,17 +35,78 @@ body,
 
 .credits {
   position: absolute;
-  bottom: 2vh;
-  right: 10px;
-  width: 30vw;
-  max-height: 15vh;
-  overflow: None;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 0;
+  width: auto;
+  max-width: min(640px, 96vw);
+  text-align: center;
   background: rgba(255, 255, 255, 0.5);
-  padding: 1rem;
-  border-radius: 8px;
-  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.3);
+  padding: 0.5rem 1rem 0.55rem;
+  border-radius: 8px 8px 0 0;
+  box-shadow: 0 -2px 8px rgba(0, 0, 0, 0.12);
   z-index: 1000;
-  /* keep above map */
+  box-sizing: border-box;
+  transition: background 0.2s ease, box-shadow 0.2s ease;
+}
+
+@media (hover: hover) {
+  .credits:hover {
+    background: rgb(255, 255, 255);
+    box-shadow: 0 -4px 14px rgba(0, 0, 0, 0.16);
+  }
+}
+
+.credits-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 0.35rem 0.65rem;
+  font-size: 0.9rem;
+}
+
+.credits-person {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  white-space: nowrap;
+}
+
+.credits-name {
+  font-weight: 500;
+}
+
+.credits-sep {
+  color: rgba(0, 0, 0, 0.35);
+  user-select: none;
+}
+
+.credits-icon-link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  color: #0d6efd;
+  text-decoration: none;
+  padding: 0.2rem;
+  margin: -0.2rem;
+  border-radius: 4px;
+}
+
+.credits-icon-link:hover {
+  color: #0a58ca;
+  background: rgba(13, 110, 253, 0.08);
+}
+
+.credits-icon-link .bi {
+  font-size: 1.05rem;
+  line-height: 1;
+}
+
+.credits-year {
+  margin: 0.35rem 0 0;
+  font-size: 0.85rem;
+  color: rgba(0, 0, 0, 0.65);
 }
 
 .box {
