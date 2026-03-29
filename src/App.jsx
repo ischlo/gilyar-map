@@ -13,6 +13,7 @@ export default function App() {
 
   const [activeMap, setActiveMap] = useState(map_topics[0]);
   const [selectedFeature, setSelectedFeature] = useState(null);
+  const [infoOpen, setInfoOpen] = useState(false);
 
   useEffect(() => {
     setSelectedFeature(null);
@@ -53,6 +54,25 @@ export default function App() {
       <Sidebar selectedFeature={selectedFeature} activeMap={activeMap} />
 
       <Credits />
+
+      <button
+        type="button"
+        className={`info-toggle ${infoOpen ? "is-open" : ""}`}
+        aria-label={infoOpen ? "Close information panel" : "Open information panel"}
+        aria-pressed={infoOpen}
+        onClick={() => setInfoOpen((current) => !current)}
+      >
+        <i className="bi bi-question-circle-fill" aria-hidden />
+      </button>
+
+      {infoOpen && (
+        <div className="info-panel">
+          <div className="info-panel-content">
+            <h1>Information</h1>
+            <p>This space is ready for project information and supporting material.</p>
+          </div>
+        </div>
+      )}
 
     </div>
   );

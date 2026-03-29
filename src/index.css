@@ -86,7 +86,7 @@ body,
   display: inline-flex;
   align-items: center;
   justify-content: center;
-  color: #0d6efd;
+  color: #000;
   text-decoration: none;
   padding: 0.2rem;
   margin: -0.2rem;
@@ -94,8 +94,8 @@ body,
 }
 
 .credits-icon-link:hover {
-  color: #0a58ca;
-  background: rgba(13, 110, 253, 0.08);
+  color: #000;
+  background: rgba(0, 0, 0, 0.08);
 }
 
 .credits-icon-link .bi {
@@ -115,4 +115,52 @@ body,
   padding: 1rem;
   margin-bottom: 1rem;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.info-toggle {
+  position: absolute;
+  right: 2vh;
+  bottom: 2vh;
+  width: clamp(72px, 10vh, 108px);
+  height: clamp(72px, 10vh, 108px);
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.92);
+  color: #111;
+  box-shadow: 0 10px 26px rgba(0, 0, 0, 0.18);
+  cursor: pointer;
+  z-index: 1101;
+  transition: transform 0.2s ease, background 0.2s ease, box-shadow 0.2s ease;
+}
+
+.info-toggle:hover {
+  transform: scale(1.03);
+  background: #fff;
+  box-shadow: 0 14px 32px rgba(0, 0, 0, 0.22);
+}
+
+.info-toggle .bi {
+  font-size: clamp(2rem, 5vh, 3.5rem);
+  line-height: 1;
+}
+
+.info-toggle.is-open {
+  background: #111;
+  color: #fff;
+}
+
+.info-panel {
+  position: absolute;
+  inset: 0;
+  z-index: 1100;
+  background: rgba(255, 255, 255, 0.97);
+  backdrop-filter: blur(3px);
+  overflow-y: auto;
+}
+
+.info-panel-content {
+  min-height: 100%;
+  box-sizing: border-box;
+  padding: 8vh 8vw;
+  color: #111;
 }
