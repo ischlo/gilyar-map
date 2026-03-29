@@ -5,13 +5,18 @@ import MapSelector from "./components/MapSelector";
 
 import "./index.css";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 
 export default function App() {
 
   const map_topics = ["Places", 'Sentiment', 'Route'];
 
   const [activeMap, setActiveMap] = useState(map_topics[0]);
+  const [selectedFeature, setSelectedFeature] = useState(null);
+
+  useEffect(() => {
+    setSelectedFeature(null);
+  }, [activeMap]);
 
   return (
     <div style={{ position: "relative", height: "100vh", width: "100vw" }}>
@@ -37,8 +42,7 @@ export default function App() {
 
       </div>
 
-
-      <MapView activeMap={activeMap} />
+      <MapView activeMap={activeMap} onFeatureSelect={setSelectedFeature} />
 
       <MapSelector
         mapTopics={map_topics}
@@ -46,7 +50,7 @@ export default function App() {
         setActiveMap={setActiveMap}
       />
 
-      <Sidebar />
+      <Sidebar selectedFeature={selectedFeature} activeMap={activeMap} />
 
       <Credits />
 
