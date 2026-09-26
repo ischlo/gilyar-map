@@ -1,6 +1,6 @@
 import { MapContainer, TileLayer, Marker, Popup, useMapEvents, ZoomControl } from "react-leaflet";
 
-function MapUpdater({ mapState, onMove }) {
+function MapUpdater({ onMove }) {
     useMapEvents({
         moveend: (e) => {
             const map = e.target;
@@ -34,7 +34,7 @@ export default function MapComponent({ mapState, onMove }) {
             <ZoomControl position="bottomleft" />
 
             {/* Synchronize map state */}
-            <MapUpdater mapState={mapState} onMove={onMove} />
+            <MapUpdater onMove={onMove} />
 
         </MapContainer>
 

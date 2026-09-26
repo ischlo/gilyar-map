@@ -117,6 +117,51 @@ body,
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
+.sentiment-legend {
+  position: absolute;
+  left: 56px;
+  bottom: 1rem;
+  width: min(290px, calc(100vw - 80px));
+  box-sizing: border-box;
+  padding: 0.7rem 0.85rem 0.8rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.9);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.2);
+  z-index: 1000;
+  pointer-events: none;
+}
+
+.sentiment-legend h2 {
+  margin: 0;
+  font-size: 1rem;
+}
+
+.sentiment-legend p {
+  margin: 0.2rem 0 0.6rem;
+  font-size: 0.8rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.sentiment-legend-items {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 0.35rem;
+}
+
+.sentiment-legend-item {
+  min-width: 0;
+  font-size: 0.68rem;
+  line-height: 1.15;
+  color: #222;
+}
+
+.sentiment-legend-swatch {
+  display: block;
+  height: 0.7rem;
+  margin-bottom: 0.25rem;
+  border-radius: 2px;
+}
+
 .info-toggle {
   position: absolute;
   right: 2vh;
@@ -163,4 +208,89 @@ body,
   box-sizing: border-box;
   padding: 8vh 8vw;
   color: #111;
+}
+
+.markdown-content {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.65;
+}
+
+.markdown-content h1,
+.markdown-content h2,
+.markdown-content h3,
+.markdown-content h4 {
+  line-height: 1.2;
+  margin: 1.8em 0 0.65em;
+}
+
+.markdown-content h1 {
+  margin-top: 0;
+  font-size: clamp(2rem, 4vw, 3.5rem);
+}
+
+.markdown-content h2 {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+}
+
+.markdown-content p,
+.markdown-content ul,
+.markdown-content ol,
+.markdown-content blockquote,
+.markdown-content table {
+  margin: 0 0 1.1em;
+}
+
+.markdown-content a {
+  color: #4f46e5;
+}
+
+.markdown-content blockquote {
+  border-left: 4px solid rgba(79, 70, 229, 0.35);
+  margin-left: 0;
+  padding-left: 1rem;
+  color: rgba(0, 0, 0, 0.7);
+}
+
+.markdown-content img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+.markdown-content table {
+  width: 100%;
+  border-collapse: collapse;
+  overflow: hidden;
+}
+
+.markdown-content th,
+.markdown-content td {
+  padding: 0.5rem 0.7rem;
+  border: 1px solid rgba(0, 0, 0, 0.18);
+  text-align: left;
+}
+
+.markdown-content th {
+  background: rgba(0, 0, 0, 0.06);
+}
+
+.markdown-content code {
+  padding: 0.1em 0.3em;
+  border-radius: 3px;
+  background: rgba(0, 0, 0, 0.07);
+}
+
+.markdown-content pre {
+  overflow-x: auto;
+  padding: 1rem;
+  border-radius: 6px;
+  background: #1f2937;
+  color: #f9fafb;
+}
+
+.markdown-content pre code {
+  padding: 0;
+  background: transparent;
 }

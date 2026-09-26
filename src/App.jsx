@@ -2,6 +2,9 @@ import MapView from "./components/MapView";
 import Credits from "./components/Credits";
 import Sidebar from './components/Sidebar';
 import MapSelector from "./components/MapSelector";
+import ReactMarkdown from "react-markdown";
+import remarkGfm from "remark-gfm";
+import projectInfo from "./content/project-info.md?raw";
 
 import "./index.css";
 
@@ -67,9 +70,10 @@ export default function App() {
 
       {infoOpen && (
         <div className="info-panel">
-          <div className="info-panel-content">
-            <h1>Information</h1>
-            <p>This space is ready for project information and supporting material.</p>
+          <div className="info-panel-content markdown-content">
+            <ReactMarkdown remarkPlugins={[remarkGfm]}>
+              {projectInfo}
+            </ReactMarkdown>
           </div>
         </div>
       )}
